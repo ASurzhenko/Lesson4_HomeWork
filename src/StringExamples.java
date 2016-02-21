@@ -23,7 +23,7 @@ public class StringExamples {
         System.out.println(str4);
 
         String str5 = "Word with spaces";
-        System.out.println(str5.trim()); //Show spaces
+        System.out.println(str5.trim()); //Delete spaces
 
         String str6 = str5.replace("with", "something"); //Change "with" to "something"
         System.out.println("Replace example: " + str6);

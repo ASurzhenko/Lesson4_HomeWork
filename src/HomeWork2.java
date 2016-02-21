@@ -12,7 +12,8 @@ i18n l10n cat e6t m5r
 
 PS: напишите функцию, которая сокращает слово, в основной функции используйте метод сплит, который
 поместит слова в массив и для каждого из них вызовет вашу функцию
- */
+*/
+
 
 import java.util.Scanner;
 
@@ -26,13 +27,21 @@ public class HomeWork2 {
         System.out.println("Enter some words through space: ");
         String words = scanner.nextLine();
 
-        String[] split = words.split(" ");
+        String[] sp = words.split(" ");
 
-        for (int i = 0; i < split.length; i++) {
-            result(split[i]);
+        for (int i = 0; i < sp.length; i++) {
+            reduction(sp[i]);
         }
     }
-    private static void result(String split) {
 
+    private static void reduction(String sp) {
+        if (sp.length() > 3) {
+            System.out.print(sp.charAt(0));
+            System.out.print((sp.length() - 2));
+            System.out.print(sp.charAt(sp.length() - 1));
+            System.out.print(" ");
+        } else {
+            System.out.print(sp + " ");
+        }
     }
 }
