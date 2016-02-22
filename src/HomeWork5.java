@@ -25,9 +25,9 @@ public class HomeWork5 {
         int a;
 
         System.out.println("Enter the numbers for the first array:");
-        for (int i = 0; i < size1; i++) {
+        for (int element : array1) {
             a = scanner.nextInt();
-            array1[i] = a;
+            array1[element] = a;
         }
 
         System.out.println("Enter the numbers for the second array:");
