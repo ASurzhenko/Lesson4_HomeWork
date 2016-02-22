@@ -18,39 +18,29 @@ import java.util.Scanner;
 public class HomeWork3 {
     public static void main(String[] args) {
 
+        int sum =0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some words through comma: ");
         String words = scanner.nextLine();
-     //   String[] array = words.split(",");
-     //   String firstHalf = words.substring(0, words.length() / 2);
-     //   String secondHalf = words.substring(words.length() / 2);
+
         String reverce = new StringBuffer(words).reverse().toString();
-      //  String concat = firstHalf.concat(reverce);
-
-
-       /* System.out.println(words.substring(0, words.length() / 2));
-        System.out.println(words.substring(words.length() / 2));*/
-        System.out.println(reverce);
-       /* System.out.println(concat);*/
-
-
-
-
-       /* String sub = words.substring(words.length() / 2);
-        String secondHalf = sub*/
-
-
-
-
-       /* for (int i = 0; i < array.length; i++) {
-            ifTheWordPalindrom(array);
-
+        if (words.equals(reverce)) {
+            sum ++;
         }
 
+
+
+
+        System.out.println(reverce);
+
+
+
+
+
+
+
+
+
     }
 
-    private static void ifTheWordPalindrom(String array[]) {
-        System.out.println(Arrays.toString(array));*/
-
-    }
 }
