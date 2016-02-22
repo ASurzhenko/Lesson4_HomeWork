@@ -22,26 +22,23 @@ public class HomeWork3 {
         System.out.println("Enter some words through commas: ");
         String words = scanner.nextLine();
 
-        String[] sp = words.split(", ");
+        String[] sp = words.split(",");
 
-        int tempCount = 0;
         int count = 0;
         for (int i = 0; i < sp.length; i++) {
-            tempCount = searchForPalindrom(sp[i]);
-            count += tempCount;
+            if (searchForPalindrom(sp[i])) {
+                count++;
+            }
         }
+
         System.out.println("There are " + count + " palindromes in the text");
     }
 
-    private static int searchForPalindrom(String sp) {
-
-        int count = 0;
+    private static boolean searchForPalindrom(String sp) {
+        sp = sp.trim();
         StringBuffer sb = new StringBuffer(sp);
         String reverse = sb.reverse().toString();
 
-        if (sp.equals(reverse)) {
-            count++;
-        }
-        return count;
+        return (sp.equals(reverse));
     }
 }
