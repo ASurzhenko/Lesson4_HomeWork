@@ -10,6 +10,7 @@ There are 3 palindromes in the text
 PS: используйте метод split c параметром "," и потом метод trim, чтобы удалить лишние пробелы слева и справа
 */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -18,27 +19,18 @@ import java.util.Scanner;
 public class HomeWork3 {
     public static void main(String[] args) {
 
-        int sum =0;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter some words through comma: ");
+        System.out.println("Enter some words through commas: ");
         String words = scanner.nextLine();
 
-        String reverce = new StringBuffer(words).reverse().toString();
-        if (words.equals(reverce)) {
-            sum ++;
-        }
+        String[] sp = words.split(", ");
+
+        System.out.println(Arrays.toString(sp));
 
 
+    }
 
-
-        System.out.println(reverce);
-
-
-
-
-
-
-
+    private static void searchForPalindrom() {
 
 
     }
