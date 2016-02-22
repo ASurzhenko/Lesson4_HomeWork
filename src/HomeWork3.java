@@ -10,7 +10,6 @@ There are 3 palindromes in the text
 PS: используйте метод split c параметром "," и потом метод trim, чтобы удалить лишние пробелы слева и справа
 */
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -25,14 +24,24 @@ public class HomeWork3 {
 
         String[] sp = words.split(", ");
 
-        System.out.println(Arrays.toString(sp));
-
-
+        int tempCount = 0;
+        int count = 0;
+        for (int i = 0; i < sp.length; i++) {
+            tempCount = searchForPalindrom(sp[i]);
+            count += tempCount;
+        }
+        System.out.println("There are " + count + " palindromes in the text");
     }
 
-    private static void searchForPalindrom() {
+    private static int searchForPalindrom(String sp) {
 
+        int count = 0;
+        StringBuffer sb = new StringBuffer(sp);
+        String reverse = sb.reverse().toString();
 
+        if (sp.equals(reverse)) {
+            count++;
+        }
+        return count;
     }
-
 }
